@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="container grid align-center justify-center onboarding">
+    <div class="cell">
+      <div class="grid">
+        <div class="cell six">
+          <h1>Your.app</h1>
+          <h2>
+            Let's get started with whatever
+            you are getting started with.
+          </h2>
+          
+          <br/>
+
+          <h4>
+            This is a thing that does a thing and describes
+            the thing that has all the things. So we put things
+            here to tell you other things.
+          </h4>
+        </div>        
+
+        <div class="cell one">
+
+        </div>
+
+        <div class="cell five cta">
+          <div class="grid vertical">
+            <h3>Let's get started.</h3>
+
+            <br/>
+
+            <p>
+              Nothing required. Just sign up and start
+              using this thing the way to use it. 
+            </p>
+
+            <br/>
+
+            <p>
+              Some other details could go here, i guess and 
+              then we could do other things and make
+              magic happen and then have fun doing other
+              code things.
+            </p>
+
+            <div class="line"></div>
+
+            <form action="/" method="post" id="signup">
+              <div class="grid form-control">
+                <div class="cell align-fit four prefix">some.app/</div>
+                <div class="cell align-fill">
+                  <input type="text" name="username" placeholder="Username"/>
+                </div>
+              </div>
+              
+              <div class="grid form-control">
+                <div class="cell align-fill">
+                  <input type="text" name="email" placeholder="Email address"/>
+                </div>
+              </div>
+
+              <div class="grid form-control">
+                <div class="cell align-fill">
+                  <input type="password" name="password" placeholder="Password"/>
+                </div>
+              </div>
+
+              <div class="grid form-control">
+                <div class="cell align-fill">
+                  <button type="submit">Sign up</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </main>
+{% endblock %}
