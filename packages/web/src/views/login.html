@@ -4,7 +4,7 @@
   <main class="container grid align-center justify-center onboarding">
     <div class="cell">
       <div class="grid">
-        <div class="cell six">
+        <div class="cell six align-center">
           <h1>Your.app</h1>
           <h2>
             Let's get started with whatever
@@ -26,13 +26,13 @@
 
         <div class="cell five cta">
           <div class="grid vertical">
-            <h3>Let's get started.</h3>
+            <h3>Welcome back.</h3>
 
             <br/>
 
             <p>
-              Nothing required. Just sign up and start
-              using this thing the way to use it. 
+              Sign in using your email and password and start doing
+              stuff today.
             </p>
 
             <br/>
@@ -47,12 +47,6 @@
             <div class="line"></div>
 
             <form action="/" method="post" id="signup">
-              <div class="grid form-control">
-                <div class="cell align-fit four prefix">some.app/</div>
-                <div class="cell align-fill">
-                  <input type="text" name="username" placeholder="Username"/>
-                </div>
-              </div>
               
               <div class="grid form-control">
                 <div class="cell align-fill">
@@ -66,14 +60,34 @@
                 </div>
               </div>
 
-              <div class="grid form-control">
+              <div class="grid form-control" style="border: none">
                 <div class="cell align-fill">
-                  <button type="submit">Sign up</button>
+                  <button type="submit">Sign in</button>
                 </div>
               </div>
+
+              <div class="grid horizontal" style="font-size: 14px">
+                <div class="cell align-fill"><a href="/users/register">No account?</a></div>
+                <div class="cell align-fill"><a href="javascript:;">Forgot password?</a></div>
+              </div>
+
+
+              <div class="grid horizontal align-center justify-center">
+                <div class="cell fill line"></div>
+                <div class="cell fit">or</div>
+                <div class="cell fill line"></div>
+              </div>
+
             </form>
+
+            <div class="grid vertical">
+              <button class="cell align-fill signin facebook-button">Sign in with Facebook</button>
+              <div style="height: 0.5em;"></div>
+              <button class="cell align-fill signin google-button">Sign in with Google</button>
+            </div>
+
           </div>
-        </div>        
+        </div>
       </div>
     </div>
   </main>

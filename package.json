@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "nodemon --watch ./packages/cdn/src --watch ./packages/web/src --watch ./packages/server/src -e ts,scss,html --exec yarn lerna",
+    "start": "nodemon --watch ./packages/cdn/src --watch ./packages/api/src --watch ./packages/engine/src --watch ./packages/web/src --watch ./packages/server/src -e ts,scss,html --exec yarn lerna",
     "lerna": "lerna bootstrap && lerna run start --stream"
   },
   "devDependencies": {

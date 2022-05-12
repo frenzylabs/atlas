@@ -1,0 +1,26 @@
+$social_colors: (
+  "facebook": #1877f2,
+  "twitter": #1da1f2,
+  "youtube": #ff0000,
+  "instagram": #c32aa3,
+  "google": #34a853,
+  "pinterest": #bd081c,
+  "linkedin": #0a66c2,
+  "snapchat": #fffc00,
+  "tiktokblack": #010101,
+  "tiktookblue": #69c9d0,
+  "tiktokpink": #ee1d52,
+  "tiktokwhite": #fff,
+  "mastodon": #2b90d9,
+  "apple": #a6b1b7,
+  "amazon": #ff9900,
+  "microsoftblue": #03a5f0,
+  "reddit": #ff5700,
+  "discord": #5865f2,
+  "telegram": #0088cc,
+);
+
+@each $name, $color in $social_colors {
+  .#{$name}-color { color: $color; }
+  .#{$name}-background { background-color: $color; }
+}

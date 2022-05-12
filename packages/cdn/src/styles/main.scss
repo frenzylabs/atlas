@@ -1,4 +1,6 @@
 @import 'thimble';
+@import './colors';
+@import './buttons';
 
 html, body {
   height: 100vh;
@@ -118,7 +120,7 @@ main {
 
       button {
         margin: 0;
-        padding: 8px 0;
+        padding: 14px 0;
         width: 100%;
         border: none;
         background: #000;
@@ -130,4 +132,8 @@ main {
       }
     }
   }
+}
+
+.signin {
+  padding: 12px 0;
 }

@@ -6,6 +6,9 @@ import express from 'express';
 import env from 'env';
 import nunjucks from 'nunjucks';
 
+import {
+  User
+} from './routes';
 
 (async () => {
   const app = express();
@@ -27,7 +30,8 @@ import nunjucks from 'nunjucks';
 
   // Routes
   
-  app.get('/', async (req, res) => res.render('index.html'));
+  app.get('/', async (req, res) => res.redirect('/users/register'));
+  app.use('/users', User);
   
   // DEBUG
 

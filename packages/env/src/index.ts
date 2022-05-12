@@ -12,7 +12,19 @@ export default {
     path: process.env['CDN_PATH'] || '/static',
     buildDir: process.env['CDN_BUILD_DIR'] || '.build',
   },
+  api: {
+    port: process.env['API_PORT'] || 3003,
+    path: process.env['API_PATH'] || '/api',
+    buildDir: process.env['API_BUILD_DIR'] || '.build',
+  },
   web: {
     port: process.env['WEB_PORT'] || 3002,
+  },
+  db: {
+    host: process.env['DB_NAME'] || 'localhost',
+    port: parseInt(process.env['DB_NAME'] || '5432'),
+    user: process.env['DB_NAME'] || 'postgres',
+    password: process.env['DB_NAME'] || 'postgres',
+    name: process.env['DB_NAME'] || 'atlas',
   }
 }

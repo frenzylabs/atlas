@@ -1034,6 +1034,294 @@ svg:not(:root) {
     transition-delay: 0s !important;
     transition-duration: 0s !important; } }
 
+.facebook-color {
+  color: #1877f2; }
+
+.facebook-background {
+  background-color: #1877f2; }
+
+.twitter-color {
+  color: #1da1f2; }
+
+.twitter-background {
+  background-color: #1da1f2; }
+
+.youtube-color {
+  color: #ff0000; }
+
+.youtube-background {
+  background-color: #ff0000; }
+
+.instagram-color {
+  color: #c32aa3; }
+
+.instagram-background {
+  background-color: #c32aa3; }
+
+.google-color {
+  color: #34a853; }
+
+.google-background {
+  background-color: #34a853; }
+
+.pinterest-color {
+  color: #bd081c; }
+
+.pinterest-background {
+  background-color: #bd081c; }
+
+.linkedin-color {
+  color: #0a66c2; }
+
+.linkedin-background {
+  background-color: #0a66c2; }
+
+.snapchat-color {
+  color: #fffc00; }
+
+.snapchat-background {
+  background-color: #fffc00; }
+
+.tiktokblack-color {
+  color: #010101; }
+
+.tiktokblack-background {
+  background-color: #010101; }
+
+.tiktookblue-color {
+  color: #69c9d0; }
+
+.tiktookblue-background {
+  background-color: #69c9d0; }
+
+.tiktokpink-color {
+  color: #ee1d52; }
+
+.tiktokpink-background {
+  background-color: #ee1d52; }
+
+.tiktokwhite-color {
+  color: #fff; }
+
+.tiktokwhite-background {
+  background-color: #fff; }
+
+.mastodon-color {
+  color: #2b90d9; }
+
+.mastodon-background {
+  background-color: #2b90d9; }
+
+.apple-color {
+  color: #a6b1b7; }
+
+.apple-background {
+  background-color: #a6b1b7; }
+
+.amazon-color {
+  color: #ff9900; }
+
+.amazon-background {
+  background-color: #ff9900; }
+
+.microsoftblue-color {
+  color: #03a5f0; }
+
+.microsoftblue-background {
+  background-color: #03a5f0; }
+
+.reddit-color {
+  color: #ff5700; }
+
+.reddit-background {
+  background-color: #ff5700; }
+
+.discord-color {
+  color: #5865f2; }
+
+.discord-background {
+  background-color: #5865f2; }
+
+.telegram-color {
+  color: #0088cc; }
+
+.telegram-background {
+  background-color: #0088cc; }
+
+button {
+  border-radius: 5px; }
+
+.facebook-button {
+  border: none;
+  background: #1877f2;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.twitter-button {
+  border: none;
+  background: #1da1f2;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.youtube-button {
+  border: none;
+  background: #ff0000;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.instagram-button {
+  border: none;
+  background: #c32aa3;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.google-button {
+  border: none;
+  background: #34a853;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.pinterest-button {
+  border: none;
+  background: #bd081c;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.linkedin-button {
+  border: none;
+  background: #0a66c2;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.snapchat-button {
+  border: none;
+  background: #fffc00;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.tiktokblack-button {
+  border: none;
+  background: #010101;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.tiktookblue-button {
+  border: none;
+  background: #69c9d0;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.tiktokpink-button {
+  border: none;
+  background: #ee1d52;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.tiktokwhite-button {
+  border: none;
+  background: #fff;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.mastodon-button {
+  border: none;
+  background: #2b90d9;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.apple-button {
+  border: none;
+  background: #a6b1b7;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.amazon-button {
+  border: none;
+  background: #ff9900;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.microsoftblue-button {
+  border: none;
+  background: #03a5f0;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.reddit-button {
+  border: none;
+  background: #ff5700;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.discord-button {
+  border: none;
+  background: #5865f2;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.telegram-button {
+  border: none;
+  background: #0088cc;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px; }
+
 html, body {
   height: 100vh;
   margin: 0;
@@ -1114,10 +1402,13 @@ main {
       font-weight: 300; }
     .onboarding .cta .form-control button {
       margin: 0;
-      padding: 8px 0;
+      padding: 14px 0;
       width: 100%;
       border: none;
       background: #000;
       color: #fff;
       font-size: 16px;
       font-weight: 500; }
+
+.signin {
+  padding: 12px 0; }

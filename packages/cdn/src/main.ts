@@ -19,7 +19,7 @@ const BUILD_DIR = path.join(__dirname, env.cdn.buildDir);
 if(!fs.existsSync(BUILD_DIR)) {
   fs.mkdirSync(BUILD_DIR);
 } else if(env.current === 'dev') {
-  fs.rmdirSync(BUILD_DIR, {recursive: true});
+  fs.rmSync(BUILD_DIR, {recursive: true});
   fs.mkdirSync(BUILD_DIR);
 }
 
