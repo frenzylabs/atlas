@@ -22,3 +22,11 @@ export {
   AccountProvider,
   AuthClientProvider
 } from './providers';
+
+export {
+  LocalStrategy,
+} from './auth';
+
+(async () => {
+  await DataSource.initialize();
+})();

@@ -17,11 +17,11 @@ __decorate([
     __metadata("design:type", String)
 ], Model.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' }),
+    (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
 ], Model.prototype, "updated", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' }),
+    (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], Model.prototype, "created", void 0);
 exports.default = Model;

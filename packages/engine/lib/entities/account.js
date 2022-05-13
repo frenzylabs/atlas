@@ -19,11 +19,11 @@ const token_1 = require("./token");
 let Model = class Model extends base_1.default {
 };
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ unique: true }),
     __metadata("design:type", String)
 ], Model.prototype, "email", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ unique: true }),
     __metadata("design:type", String)
 ], Model.prototype, "username", void 0);
 __decorate([

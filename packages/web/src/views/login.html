@@ -46,11 +46,24 @@
 
             <div class="line"></div>
 
-            <form action="/" method="post" id="signup">
+            <form action="/users/login" method="post" id="signup">
+              {% if errors %}
+              <div class="grid form-control" style="border:none">
+                <div class="cell align-fill" style="padding: 10px 10px 0 10px;color: red;">
+                  <ul>
+                    {% for error in errors %}
+                      <li style="padding: 0;margin:0">{{ error }}</li>
+                    {% endfor %}
+                  </ul>                  
+                </div>
+              </div>
+
+              {% endif %}
+
               
               <div class="grid form-control">
                 <div class="cell align-fill">
-                  <input type="text" name="email" placeholder="Email address"/>
+                  <input type="text" name="login" placeholder="Username or Email address"/>
                 </div>
               </div>
 
@@ -70,21 +83,7 @@
                 <div class="cell align-fill"><a href="/users/register">No account?</a></div>
                 <div class="cell align-fill"><a href="javascript:;">Forgot password?</a></div>
               </div>
-
-
-              <div class="grid horizontal align-center justify-center">
-                <div class="cell fill line"></div>
-                <div class="cell fit">or</div>
-                <div class="cell fill line"></div>
-              </div>
-
             </form>
-
-            <div class="grid vertical">
-              <button class="cell align-fill signin facebook-button">Sign in with Facebook</button>
-              <div style="height: 0.5em;"></div>
-              <button class="cell align-fill signin google-button">Sign in with Google</button>
-            </div>
 
           </div>
         </div>

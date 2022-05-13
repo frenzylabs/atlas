@@ -1,6 +1,7 @@
 import {
   Entity, 
   Column,
+  Index,
   OneToMany,
 } from 'typeorm';
 
@@ -15,10 +16,10 @@ import {
 
 @Entity({name: 'accounts'})
 class Model extends Base {
-  @Column()
+  @Column({unique: true})
   email:string;
 
-  @Column()
+  @Column({unique: true})
   username:string;
 
   @Column()

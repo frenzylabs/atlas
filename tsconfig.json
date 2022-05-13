@@ -9,6 +9,6 @@
     "experimentalDecorators": true,
     "allowJs": true,
     "noImplicitAny": false,
-    "skipLibCheck": true,
+    "skipLibCheck": true
  }
 }

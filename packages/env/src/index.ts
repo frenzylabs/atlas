@@ -3,6 +3,9 @@ import 'dotenv/config';
 
 export default {
   current: process.env.NODE_ENV || 'dev',
+  security: {
+    session_secret: process.env['SESSION_SECRET'] || 'this-is-not-safe',
+  },
   http: {
     host: process.env['HTTP_HOST'] || 'http://localhost',
     port: process.env['HTTP_PORT'] || 3000,
@@ -13,12 +16,12 @@ export default {
     buildDir: process.env['CDN_BUILD_DIR'] || '.build',
   },
   api: {
-    port: process.env['API_PORT'] || 3003,
+    port: process.env['API_PORT'] || 3002,
     path: process.env['API_PATH'] || '/api',
     buildDir: process.env['API_BUILD_DIR'] || '.build',
   },
   web: {
-    port: process.env['WEB_PORT'] || 3002,
+    port: process.env['WEB_PORT'] || 3003,
   },
   db: {
     host: process.env['DB_NAME'] || 'localhost',

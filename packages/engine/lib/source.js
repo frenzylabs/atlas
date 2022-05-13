@@ -14,7 +14,7 @@ const dataSource = new typeorm_1.DataSource({
     password: env_1.default.db.password,
     database: env_1.default.db.name,
     synchronize: true,
-    logging: true,
+    logging: false,
     entities: entities_1.entities,
     subscribers: [],
     migrations: [],

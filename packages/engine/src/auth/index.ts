@@ -1,0 +1,3 @@
+export {
+  LocalStrategy,
+} from './strategies';

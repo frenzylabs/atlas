@@ -10,7 +10,7 @@ const dataSource =  new DataSource({
   password: Env.db.password,
   database: Env.db.name,
   synchronize: true,
-  logging: true,
+  logging: false,
   entities: entities,
   subscribers: [],
   migrations: [],

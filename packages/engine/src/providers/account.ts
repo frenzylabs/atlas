@@ -1,6 +1,13 @@
+import 'appendix';
+
 import DataSource from '../source';
 import argon2 from 'argon2';
+
 import {Account} from '../entities';
+
+import {
+  DatabaseError
+} from '../errors';
 
 const repo = DataSource.manager.getRepository(Account);
 
@@ -16,32 +23,44 @@ const save = async ({email, username, password}) => {
     account.email = email;
     account.username = username;
     account.password = await argon2.hash(password);
-  
-    return await repo.save(account);
+    
+    const saved = await repo.save(account);
+
+    console.log(saved);
+
+    if(!saved) {
+      throw new Error('Unable to save account');
+    }
+
+    return saved;
   } catch (e) {
+    DatabaseError(e);
     return e;
   }
 }
 
 const verify = async ({login, password}) => {
   try {
-    const account = await find({
+    const accounts = await repo.find({
       where: [
         {email: login},
         {username: login},
       ]
-    })[0];
+    });
 
+    const account = accounts.first();
     if(!account) {
-      return false;
+      return null;
     }
 
-    return await argon2.verify(account.password, password);
+    if(await argon2.verify(account.password, password)) {
+      return account;
+    }
+
+    return null;
 
   } catch (e) {
-    console.log('account verifty error: ', e);
-
-    return false;
+    throw e;
   }
 }
 

@@ -1,0 +1,9 @@
+{% macro divider(caption='') %}
+<div class="grid horizontal align-center justify-center" style="width: 100%">
+  <div class="cell fill line"></div>
+  {% if caption != '' %}
+  <div class="cell fit">{{caption}}</div>
+  <div class="cell fill line"></div>
+  {% endif %}
+</div>
+{% endmacro %}
