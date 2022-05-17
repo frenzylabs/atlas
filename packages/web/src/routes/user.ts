@@ -53,7 +53,6 @@ router.post('/register', validate({
       }
 
     } catch(err) {
-
       errors.push(err.message);
     }
   }

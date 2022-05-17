@@ -25,6 +25,7 @@ export {
 
 export {
   LocalStrategy,
+  RememberStrategy
 } from './auth';
 
 (async () => {

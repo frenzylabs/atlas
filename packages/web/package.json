@@ -4,7 +4,8 @@
   "main": "src/main,ts",
   "license": "MIT",
   "scripts": {
-    "start": "rm -rf public/app.js && esbuild src/app/renderer.tsx --bundle --outfile=public/app.js && tsnd --respawn src/main.ts",
+    "start": "tsnd --respawn src/main.ts",
+    "build:ui": "rm -rf public/app.js && esbuild src/app/renderer.tsx --bundle --outfile=public/app.js &&",
     "build": "tsc"
   },
   "dependencies": {

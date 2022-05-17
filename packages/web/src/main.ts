@@ -11,6 +11,7 @@ import { ensureLoggedIn } from 'connect-ensure-login';
 
 import {
   LocalStrategy,
+  RememberStrategy
 } from 'engine';
 
 import {
@@ -25,6 +26,7 @@ import {
   // Configure
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
+  
 
   // Session & Auth
   app.use(session({

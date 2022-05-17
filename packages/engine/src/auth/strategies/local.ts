@@ -2,6 +2,10 @@ import passport from 'passport';
 import {Strategy as LocalStrategy} from 'passport-local';
 
 import {
+  Account
+} from '../../entities';
+
+import {
   AccountProvider
 } from '../../providers';
 
@@ -26,21 +30,15 @@ const strategy = new LocalStrategy(
 });
 
 passport.deserializeUser((id, done) => {
-  console.log(id);
-  
   done(null, id);
 });
 
-passport.serializeUser((id, done) => {
-  try {
-    const account = AccountProvider.get({id});
+passport.serializeUser(async (entity:Account, done) => {
 
-    if(!account) done(null, false);
-
-    done(null, account);
-  } catch (err) {
-    done(err);
-  }
+  done(null, {
+    id: entity.id,
+    username: entity.username,
+  });
 });
 
 export default strategy;
