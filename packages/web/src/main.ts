@@ -4,6 +4,7 @@ import 'appendix';
 import path from 'path';
 import express from 'express';
 import session from 'express-session';
+import cookieParser from 'cookie-parser';
 import passport from 'passport';
 import env from 'env';
 import nunjucks from 'nunjucks';
@@ -11,7 +12,6 @@ import { ensureLoggedIn } from 'connect-ensure-login';
 
 import {
   LocalStrategy,
-  RememberStrategy
 } from 'engine';
 
 import {
@@ -35,11 +35,13 @@ import {
     saveUninitialized: false,
   }));
 
-  passport.use(LocalStrategy);
-
+  
   app
+  .use(cookieParser())
   .use(passport.initialize())
   .use(passport.session());
+  
+  passport.use(LocalStrategy);
 
   // Views
   nunjucks.configure(path.join(__dirname, 'views'), {

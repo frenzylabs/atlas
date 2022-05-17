@@ -72,10 +72,14 @@ router.get('/login', async (req, res) => {
 
 router.post(
   '/login', 
-  passport.authenticate('local', {failureRedirect: '/users/login', failureMessage: 'Invalid login and/or password'}),
-  async (req:Request, res) => {
-    res.redirect('/app');
-  }
+  passport.authenticate(
+    'local', 
+    {
+      failureRedirect: '/users/login', 
+      failureMessage: 'Invalid login and/or password',
+      successRedirect: '/app',
+    }
+  ),
 );
 
 export default router;

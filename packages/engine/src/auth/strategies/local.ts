@@ -20,12 +20,14 @@ const strategy = new LocalStrategy(
       const account = await AccountProvider.verify({login, password});
 
       if(!account) {
-        done(null, false);
-      } else {
-        done(null, account);
-      }
+        return done(null, false);
+      } 
+      const {id, username} = account;
+
+      return done(null, {id, username,});
+      
     } catch(err) {
-      done(err);
+      return done(err);
     }
 });
 
@@ -34,7 +36,6 @@ passport.deserializeUser((id, done) => {
 });
 
 passport.serializeUser(async (entity:Account, done) => {
-
   done(null, {
     id: entity.id,
     username: entity.username,
