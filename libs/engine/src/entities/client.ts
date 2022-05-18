@@ -30,8 +30,6 @@ class Model extends Base {
 
   @OneToMany(type => RefreshToken, code => code.client)
   refreshTokens: RefreshToken[];
-
-
 }
 
 export default Model;

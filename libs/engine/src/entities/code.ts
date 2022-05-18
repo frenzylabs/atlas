@@ -10,7 +10,7 @@ import Account from './account';
 
 @Entity({name: 'auth_code'})
 class Model extends Base {
-  @Column()
+  @Column({unique: true})
   key: string;
   
   @Column()

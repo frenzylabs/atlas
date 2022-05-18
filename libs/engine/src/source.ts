@@ -1,14 +1,14 @@
 import {DataSource} from 'typeorm';
-import Env from 'env';
+import env from 'env';
 import {entities} from './entities';
 
 const dataSource =  new DataSource({
   type: "postgres",
-  host: Env.db.host,
-  port: Env.db.port,
-  username: Env.db.user,
-  password: Env.db.password,
-  database: Env.db.name,
+  host: env.db.host,
+  port: env.db.port,
+  username: env.db.user,
+  password: env.db.password,
+  database: env.db.name,
   synchronize: true,
   logging: false,
   entities: entities,

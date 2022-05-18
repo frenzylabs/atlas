@@ -41,8 +41,12 @@ const save = async (data:Unsaved) => {
   }
 }
 
+const revoke = async (code) => 
+  await repo.delete({key: code});
+
 export default {
   get,
   find,
   save,
+  revoke,
 }

@@ -20,8 +20,12 @@ export default {
     path: process.env['API_PATH'] || '/api',
     buildDir: process.env['API_BUILD_DIR'] || '.build',
   },
+  oauth: {
+    port: process.env['OAUTH_PORT'] || 3003,
+    path: process.env['OAUTH_PATH'] || 'oauth'
+  },
   web: {
-    port: process.env['WEB_PORT'] || 3003,
+    port: process.env['WEB_PORT'] || 3004,
   },
   db: {
     host: process.env['DB_HOST'] || 'localhost',

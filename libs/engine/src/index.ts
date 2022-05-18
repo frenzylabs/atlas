@@ -16,8 +16,8 @@ export {
 };
 
 export {
-  AccessProvider,
-  RefreshProvider,
+  AccessTokenProvider,
+  RefreshTokenProvider,
   AuthCodeProvider,
   AccountProvider,
   AuthClientProvider
@@ -25,6 +25,9 @@ export {
 
 export {
   LocalStrategy,
+  BasicStrategy,
+  ClientBasicStrategy,
+  BearerStrategy
 } from './auth';
 
 (async () => {

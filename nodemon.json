@@ -24,6 +24,7 @@
     "./services/cdn/src",
     "./services/api/src",
     "./services/web/src",
+    "./services/oauth/src",
     "./services/server/src"
   ]
 }
