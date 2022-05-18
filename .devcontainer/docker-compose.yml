@@ -1,0 +1,32 @@
+version: "3"
+services:
+  atlas:
+    container_name: atlas-devcontainer
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    image: "localhost/atlas-devcontainer:latest"
+    ipc: host
+    shm_size: "8gb"
+    volumes:
+      # Mount the root folder that contains .git
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - ${HOME}/.kube:/root/.kube
+      - ${HOME}/.ssh:/root/.ssh
+      - ${HOME}/.gnupg:/root/.gnupg
+      - ${HOME}/.config:/root/.config
+      - atlas-bashhistory:/commandhistory
+      - atlas-repo:/root/atlas
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    environment:
+      REMOTE_HOST: ${REMOTE_HOST:-http://host.docker.internal:7000}
+      MONGOMS_DOWNLOAD_URL: ${MONGOMS_DOWNLOAD_URL:-https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-debian10-4.4.1.tgz}
+      MONGOMS_VERSION: ${MONGOMS_VERSION:-4.4.1}
+    ports:
+      # - "3000:3000"
+      # - "5000:5000"
+
+volumes:
+  atlas-repo:
+  atlas-bashhistory:
+

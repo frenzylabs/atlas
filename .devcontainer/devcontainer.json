@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.117.1/containers/kubernetes-helm
+{
+  "name": "Atlas",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "atlas",
+  "workspaceFolder": "/root/atlas",
+  "localWorkspaceFolder": "../",
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/zsh"
+  },
+  // Add the IDs of extensions to install when the container is created.
+  "extensions": ["ms-azuretools.vscode-docker", "esbenp.prettier-vscode"],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [3003],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "",
+  // Uncomment when using a ptrace-based debugger like C++, Go, and Rust.
+  // "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+  "runArgs": ["--network host", "--privileged"],
+  // "containerEnv": {
+  // 	"MY_CONTAINER_VAR": "some-value-here"
+  // },
+  "remoteEnv": {
+    "SYNC_LOCALHOST_KUBECONFIG": "true"
+  }
+  // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+  // "remoteUser": "vscode"
+}
