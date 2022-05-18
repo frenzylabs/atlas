@@ -24,10 +24,10 @@ export default {
     port: process.env['WEB_PORT'] || 3003,
   },
   db: {
-    host: process.env['DB_NAME'] || 'localhost',
-    port: parseInt(process.env['DB_NAME'] || '5432'),
-    user: process.env['DB_NAME'] || 'postgres',
-    password: process.env['DB_NAME'] || 'postgres',
+    host: process.env['DB_HOST'] || 'localhost',
+    port: parseInt(process.env['DB_PORT'] || '5432'),
+    user: process.env['DB_USER'] || 'postgres',
+    password: process.env['DB_PASSWD'] || 'postgres',
     name: process.env['DB_NAME'] || 'atlas',
   }
 }

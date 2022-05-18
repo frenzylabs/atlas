@@ -25,6 +25,9 @@ class Model extends Base {
   @Column()
   password:string;
 
+  @Column({default: false})
+  admin:boolean;
+
   @OneToMany(type => Code, code => code.account)
   codes: Code[];
 
