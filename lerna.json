@@ -3,7 +3,8 @@
   "npmClient": "yarn",
   "packages": [
     "services/*",
-    "libs/*"
+    "libs/*",
+    "tools/*",
   ],
   "command": {
     "bootstrap": {

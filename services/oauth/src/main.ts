@@ -15,6 +15,7 @@ import {
   ClientBasicStrategy,
 } from './strategies';
 
+import {databaseInitialize} from 'data';
 
 import {
   Authorize,
@@ -24,6 +25,8 @@ import {
 import OAuth from './route';
 
 (async() => {;
+  await databaseInitialize();
+  
   const app = express();
 
   app

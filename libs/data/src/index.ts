@@ -23,6 +23,6 @@ export {
   AuthClientProvider
 } from './providers';
 
-(async () => {
+export const databaseInitialize = async () => {
   await DataSource.initialize();
-})();
+}

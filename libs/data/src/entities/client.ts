@@ -13,10 +13,10 @@ import {
 
 @Entity({name: 'auth_client'})
 class Model extends Base {
-  @Column()
+  @Column({unique: true})
   name: string;
   
-  @Column()
+  @Column({unique: true})
   secret: string;
   
   @Column()

@@ -4,9 +4,12 @@ import 'appendix';
 import express from 'express';
 import env from 'env';
 
-(async () => {
-  const app = express();
+import {databaseInitialize} from 'data';
 
+(async () => {
+  await databaseInitialize();
+
+  const app = express();
 
   // Configure
   app.use(express.json());

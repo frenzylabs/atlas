@@ -6,14 +6,14 @@
   "private": true,
   "workspaces": [
     "services/*",
-    "libs/*"
+    "libs/*",
+    "tools/*"
   ],
   "scripts": {
     "start": "nodemon --exec yarn lerna",
     "lerna": "lerna bootstrap && lerna run start --stream"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.5.0",
     "lerna": "^4.0.0"
   }
 }

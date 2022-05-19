@@ -10,6 +10,8 @@ import env from 'env';
 import nunjucks from 'nunjucks';
 import { ensureLoggedIn } from 'connect-ensure-login';
 
+import {databaseInitialize} from 'data';
+
 import {
   LocalStrategy,
 } from './strategies';
@@ -20,8 +22,9 @@ import {
 } from './routes';
 
 (async () => {
-  const app = express();
+  await databaseInitialize();
 
+  const app = express();
 
   // Configure
   app.use(express.json());
