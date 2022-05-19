@@ -13,13 +13,13 @@ import {
   BasicStrategy,
   BearerStrategy,
   ClientBasicStrategy,
-} from 'engine';
+} from './strategies';
 
 
 import {
   Authorize,
   ClientAuthenticated,
-} from 'middleware';
+} from './middleware';
 
 import OAuth from './route';
 

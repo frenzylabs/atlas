@@ -18,7 +18,7 @@
   },
   "ext": "ts,scss,html,tsx",
   "watch": [
-    "./lib/engine/src",
+    "./lib/data/src",
     "./lib/appendix/src",
     "./lib/env/src",
     "./services/cdn/src",

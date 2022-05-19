@@ -3,7 +3,7 @@ import {BasicStrategy} from "passport-http";
 import {
   AccountProvider,
   AuthClientProvider
-} from '../../providers';
+} from 'data';
 
 export const Basic = new BasicStrategy(async (login, password, done) => {
   try {

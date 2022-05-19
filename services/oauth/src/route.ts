@@ -5,12 +5,11 @@ import Request from './request';
 
 
 import {
-  AccountProvider,
   AuthClientProvider,
   AuthCodeProvider,
   AccessTokenProvider,
-} from 'engine';
-import account from 'engine/src/providers/account';
+} from 'data';
+
 
 const init = async (app:express.Application) => {
   const server = oauth2orize.createServer();

@@ -4,7 +4,7 @@ import {Strategy} from "passport-http-bearer";
 import {
   AccountProvider,
   AccessTokenProvider,
-} from '../../providers';
+} from 'data';
 
 const bearer = new Strategy(async (accessToken, done) => {
   try {

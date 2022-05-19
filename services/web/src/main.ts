@@ -12,7 +12,7 @@ import { ensureLoggedIn } from 'connect-ensure-login';
 
 import {
   LocalStrategy,
-} from 'engine';
+} from './strategies';
 
 import {
   User,

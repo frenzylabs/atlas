@@ -3,7 +3,7 @@ import passport from 'passport';
 
 import {
   AccountProvider,
-} from 'engine';
+} from 'data';
 
 import {Request} from '../types';
 import {validate} from 'middleware';

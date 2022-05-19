@@ -23,13 +23,6 @@ export {
   AuthClientProvider
 } from './providers';
 
-export {
-  LocalStrategy,
-  BasicStrategy,
-  ClientBasicStrategy,
-  BearerStrategy
-} from './auth';
-
 (async () => {
   await DataSource.initialize();
 })();

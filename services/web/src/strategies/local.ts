@@ -3,11 +3,11 @@ import {Strategy as LocalStrategy} from 'passport-local';
 
 import {
   Account
-} from '../../entities';
+} from 'data';
 
 import {
   AccountProvider
-} from '../../providers';
+} from 'data';
 
 
 const strategy = new LocalStrategy(
