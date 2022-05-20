@@ -5,7 +5,6 @@ packages/engine/lib
 
 ## Editor
 .vscode
-.envrc
 
 ### macOS ###
 # General
