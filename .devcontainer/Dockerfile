@@ -1,5 +1,5 @@
 
-FROM frenzylab/devcontainer
+FROM frenzylab/devcontainer:bullseye
 
 RUN apt-get --allow-releaseinfo-change update && apt-get install -y \
   pkg-config \

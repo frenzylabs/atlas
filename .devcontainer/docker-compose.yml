@@ -11,12 +11,15 @@ services:
     volumes:
       # Mount the root folder that contains .git
       - "/var/run/docker.sock:/var/run/docker.sock"
-      # - ${HOME}/.kube:/root/.kube
+      # - ${HOME}/.kube:/root/.kube            
+      - ${HOME}/.local:/root/.local
       - ${HOME}/.ssh:/root/.ssh
       - ${HOME}/.gnupg:/root/.gnupg
       - ${HOME}/.config:/root/.config
+      - ${HOME}/.gitconfig:/root/.gitconfig
       - atlas-bashhistory:/commandhistory
       - atlas-repo:/root/atlas
+      - ../.devcontainer:/root/atlas/.devcontainer
     command: /bin/sh -c "while sleep 1000; do :; done"
     environment:
       REMOTE_HOST: ${REMOTE_HOST:-http://host.docker.internal:7000}
